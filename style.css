@@ -48,7 +48,7 @@ body, html {
                             greenyellow 0,greenyellow 75%,#58a 0);
     background-size:15px 15px;
     width: 0%;
-    transition: all .5s ease-in;
+    transition: all 3s ease-in;
 }
 
 .year {
