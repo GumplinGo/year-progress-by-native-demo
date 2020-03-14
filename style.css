@@ -1,0 +1,65 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./assets/Chihiro.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.wraper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    margin: 0 30px;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 50px;
+    padding: 10px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.progress-container {
+    border-radius: 15px;
+    width: 60%;
+    height: 30px;
+    background-color: pink;
+    display: flex;
+    justify-content: stretch;
+    overflow-x: hidden;
+}
+
+.finish {
+    background:linear-gradient(45deg,greenyellow 25%,#58a 0,#58a 50%,
+                            greenyellow 0,greenyellow 75%,#58a 0);
+    background-size:30px 30px;
+    width: 0%;
+    transition: all .5s ease-in;
+}
+
+.year {
+    font-weight: bold;
+    color: red;
+}
+
+.message {
+    color: white;
+    margin-bottom: 20px;
+}
+.percent, .days-has-past {
+    font-weight: bold;
+    color: red;
+}
