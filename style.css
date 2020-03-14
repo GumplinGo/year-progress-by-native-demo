@@ -8,8 +8,9 @@ body, html {
     align-items: center;
     justify-content: center;
     background-image: url('./assets/Chihiro.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: center;
 
 }
 
@@ -35,7 +36,7 @@ body, html {
 .progress-container {
     border-radius: 15px;
     width: 60%;
-    height: 30px;
+    height: 15px;
     background-color: pink;
     display: flex;
     justify-content: stretch;
@@ -45,7 +46,7 @@ body, html {
 .finish {
     background:linear-gradient(45deg,greenyellow 25%,#58a 0,#58a 50%,
                             greenyellow 0,greenyellow 75%,#58a 0);
-    background-size:30px 30px;
+    background-size:15px 15px;
     width: 0%;
     transition: all .5s ease-in;
 }
