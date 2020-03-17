@@ -1,6 +1,8 @@
 body, html {
     margin: 0;
     padding: 0;
+    color: rosybrown;
+    font-family: 'Noto Sans SC', sans-serif;
 }
 .container {
     min-height: 100vh;
@@ -29,14 +31,14 @@ body, html {
     text-align: center;
     font-size: 50px;
     padding: 10px;
-    color: white;
     margin-bottom: 30px;
+    font-weight: bolder;
 }
 
 .progress-container {
     border-radius: 15px;
     width: 60%;
-    height: 15px;
+    height: 27px;
     background-color: pink;
     display: flex;
     justify-content: stretch;
@@ -44,8 +46,13 @@ body, html {
 }
 
 .finish {
-    background:linear-gradient(45deg,greenyellow 25%,#58a 0,#58a 50%,
-                            greenyellow 0,greenyellow 75%,#58a 0);
+    background-image: linear-gradient(45deg, 
+    #451b24 25%, 
+    #892b32 0, 
+    #892B2F 50%, 
+    #451b24 0, 
+    #451b24 75%, 
+    #892b32 0);
     background-size:15px 15px;
     width: 0%;
     transition: all 3s ease-in;
@@ -53,14 +60,20 @@ body, html {
 
 .year {
     font-weight: bold;
-    color: red;
 }
 
 .message {
-    color: white;
     margin-bottom: 20px;
 }
 .percent, .days-has-past {
     font-weight: bold;
-    color: red;
+    color: firebrick;
+}
+
+.days-has-past {
+    font-size: 80px;
+}
+
+.percent {
+    font-size: 21px;
 }
