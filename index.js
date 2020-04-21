@@ -2,6 +2,8 @@ let currentYear;
 let daysHavePast;
 let percent;
 let dayAmount;
+let timer1;
+let timer;
 const getDaysOfYear = (year) => {
 
     isLeapYear = year % 400 === 0 || (year % 100 !== 0 && year % 4 === 0);
@@ -32,18 +34,41 @@ const getProgress = () => {
 }
 
 const setProgressToPage = () => {
-    const finishEle = document.querySelector('.finish');
+    // const finishEle = document.querySelector('.finish');
+
+    if (timer) {
+        clearTimeout(timer);
+    }
+    if (timer1) {
+        clearTimeout(timer1);
+    }
+
     const yearEle = document.querySelectorAll('.year');
     const pastEle = document.querySelector('.days-has-past');
     const percentEle = document.querySelector('.percent');
+    const refresh = document.querySelector('.refresh');
+    const progressContainer = document.querySelector('.progress-container');
     percent = getProgress();
-    finishEle.style.width = percent * 100 + '%';
+
+    const finishLast = document.querySelector('.finish');
+    if (finishLast) {
+        progressContainer.removeChild(finishLast);
+    }
+
+    const finishEle = document.createElement('div');
+    finishEle.className = 'finish';
+    progressContainer.appendChild(finishEle);
+    timer1 = setTimeout(() => {
+        finishEle.style.width = percent * 100 + '%';
+        clearTimeout(timer1);
+    })
+
     yearEle.forEach(item => item.innerHTML = currentYear);
 
     const unitPercent = parseFloat((percent / 180).toFixed(4));
     const timeGap = 3000 / 180;
     let dynamicPercent = 0;
-    let Timer = setTimeout(function increateByPercent() {
+    timer = setTimeout(function increateByPercent() {
         dynamicPercent += unitPercent;
         if (dynamicPercent < percent) {
             percentEle.innerHTML = (dynamicPercent * 100).toFixed(2);
@@ -52,9 +77,11 @@ const setProgressToPage = () => {
         } else {
             percentEle.innerHTML = (percent * 100).toFixed(2);
             pastEle.innerHTML = daysHavePast;
-            clearTimeout(Timer)
+            clearTimeout(timer)
         }
-    }, timeGap)
+    }, timeGap);
+
+    refresh.addEventListener('click', setProgressToPage);
 }
 
 window.onload = setProgressToPage;
