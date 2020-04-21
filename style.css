@@ -33,6 +33,7 @@ body, html {
     padding: 10px;
     margin-bottom: 30px;
     font-weight: bolder;
+    color: whitesmoke;
 }
 
 .progress-container {
@@ -67,7 +68,7 @@ body, html {
 }
 .percent, .days-has-past {
     font-weight: bold;
-    color: firebrick;
+    color: greenyellow;
 }
 
 .days-has-past {
