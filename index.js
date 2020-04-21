@@ -38,7 +38,7 @@ const setProgressToPage = () => {
     percent = getProgress();
     finishEle.style.width = percent;
     yearEle.forEach(item => item.innerHTML = currentYear);
-    percentEle.innerHTML = parseFloat(percent).toFixed(2);
+    percentEle.innerHTML = Math.round(parseFloat(percent));
     pastEle.innerHTML = daysHavePast;
 }
 
