@@ -42,4 +42,5 @@ const setProgressToPage = () => {
     pastEle.innerHTML = daysHavePast;
 }
 
-setProgressToPage();
+// setProgressToPage();
+window.onload = setProgressToPage;
