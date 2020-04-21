@@ -47,12 +47,12 @@ body, html {
 
 .finish {
     background-image: linear-gradient(45deg,
-    #451b24 25%,
-    #892b32 0,
-    #892B2F 50%,
-    #451b24 0,
-    #451b24 75%,
-    #892b32 0);
+    #f3f730 25%,
+    #000000 0,
+    #000000 50%,
+    #f3f730 0,
+    #f3f730 75%,
+    #000000 0);
     background-size:15px 15px;
     width: 0%;
     transition: all 3s ease-in;
