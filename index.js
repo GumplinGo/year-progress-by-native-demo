@@ -82,6 +82,10 @@ const setProgressToPage = () => {
     }, timeGap);
 
     refresh.addEventListener('click', setProgressToPage);
+
+    // calculate the real viewport height to polyfill mobile browser
+    const vh = window.innerHeight *0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
 window.onload = setProgressToPage;
