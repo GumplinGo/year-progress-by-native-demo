@@ -6,8 +6,8 @@ body, html {
     /* height: 100%; */
 }
 .container {
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
+    height: calc(100vh-50px);
+    height: calc((var(--vh, 1vh) * 100) - 50px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,4 +101,17 @@ body, html {
 .percent {
     opacity: 1;
     font-size: 21px;
+}
+
+footer {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+    height: 50px;
+}
+
+footer a {
+    color: #ffffff;
+    font-size: 14px;
 }
