@@ -1,3 +1,5 @@
+@import "./normalize.scss";
+
 body, html {
     margin: 0;
     padding: 0;
@@ -30,13 +32,19 @@ body, html {
     border-radius: 5px;
     margin-bottom: 20px;
     box-shadow: lightblue 2px 4px 10px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(91, 201, 238);
+        color: white;
+    }
 }
 
-.refresh:hover {
-    cursor: pointer;
-    background-color: rgb(91, 201, 238);
-    color: white;
-}
+// .refresh:hover {
+//     cursor: pointer;
+//     background-color: rgb(91, 201, 238);
+//     color: white;
+// }
 
 .wraper {
     display: flex;
@@ -109,9 +117,14 @@ footer {
     align-items: center;
     background: #222;
     height: 50px;
+
+    a {
+        color: #ffffff;
+        font-size: 14px;
+    }
 }
 
-footer a {
-    color: #ffffff;
-    font-size: 14px;
-}
+// footer a {
+//     color: #ffffff;
+//     font-size: 14px;
+// }

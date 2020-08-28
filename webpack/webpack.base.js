@@ -7,7 +7,7 @@ const MinniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 // js压缩
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin');
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
@@ -92,12 +92,9 @@ module.exports = {
   //   collapseWhitespace: true // 折叠空行变成一行
   // },
   optimization: {
+    minimize: true,
     minimizer: [
-      new UglifyJsPlugin({
-          cache: true,
-          parallel: true,
-          sourceMap: true
-      }),
+      new TerserPlugin(),
       new OptimizeCSSAssetsPlugin({})
     ],
     splitChunks: {              // 分割代码块，针对多入口

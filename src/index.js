@@ -1,4 +1,4 @@
-import './style.scss';
+import './style/style.scss';
 
 let currentYear;
 let daysHavePast;
